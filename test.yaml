@@ -3,10 +3,8 @@ description: "...."
 policies:
   -  \policies\add_network_policy.yaml
   -  \policies\disallow_default_namespace.yaml
-  -  \policies\require_ro_rootfs.yaml
-  -  \policies\require_probes.yaml
 resources:
-  - \resources\required_default_network_policy.yaml
+  - \resources\disallow_default_namespace.yaml
 results:
   - policy: disallow-default-namespace
     rule: require-namespace
