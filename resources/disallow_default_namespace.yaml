@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp-pod
+  name: myapp-pod6
   namespace: default
   labels:
     app: myapp
