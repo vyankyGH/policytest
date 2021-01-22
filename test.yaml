@@ -1,0 +1,25 @@
+name: test-1
+description: "...."
+policies:
+  -  ../../../samples/best_practices/add_network_policy.yaml
+resources:
+  - ../../../test/resources/required_default_network_policy.yaml
+variables:
+  - ../../../samples/best_practices/value.yml
+results:
+  - policy: disallow-default-namespace
+    rule: require-namespace
+    status: pass
+  - policy: disallow-default-namespace
+    rule: validate-namespace
+    status: pass
+  - policy: require-ro-rootfs
+    rule: validate-readOnlyRootFilesystem
+    status: fail
+  - policy: require-pod-probes
+    rule: validate-livenessProbe-readinessProbe
+    status: pass
+  - policy: require-pod-requests-limits
+    rule: validate-resources 
+    status: fail
+  
