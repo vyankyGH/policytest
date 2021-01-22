@@ -1,11 +1,9 @@
 name: test-1
 description: "...."
 policies:
-  -  ../../../samples/best_practices/add_network_policy.yaml
+  -  policies/add_network_policy.yaml
 resources:
-  - ../../../test/resources/required_default_network_policy.yaml
-variables:
-  - ../../../samples/best_practices/value.yml
+  - resources/required_default_network_policy.yaml
 results:
   - policy: disallow-default-namespace
     rule: require-namespace
