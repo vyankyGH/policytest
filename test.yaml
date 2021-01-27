@@ -31,4 +31,3 @@ results:
     rule: validate-livenessProbe-readinessProbe
     status: fail
     resource: eemyapp-podw
-  
